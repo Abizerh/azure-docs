@@ -97,6 +97,8 @@ If your organization uses managed (non-federated) setup with on-premises AD and 
 
 If your organization requires access to the Internet via an outbound proxy, you must implement Web Proxy Auto-Discovery (WPAD) to enable Windows 10 computers to register to Azure AD.
 
+When your AADconnect is configured for 'Alternate ID' (i.e. syncing mail as UPN because on-prem UPN suffix cannot be used in the loginname of the user synced to Azure AD), Hybrid Azure AD device registration will only work with federated domains (using ADFS). Seamless SSO along with 'Alternate ID' dont allow Hybrid Azure AD device registration and conditional access for Windows 10 domain joined devices.
+
 ## Configuration steps
 
 You can configure hybrid Azure AD joined devices for various types of Windows device platforms. This topic includes the required steps for all typical configuration scenarios.  
